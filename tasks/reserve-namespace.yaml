@@ -44,6 +44,8 @@ spec:
         #!/bin/bash
         set -ex
 
+        exit 1
+
         echo Testing
         env
 
