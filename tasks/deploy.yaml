@@ -167,10 +167,4 @@ spec:
         login.sh
 
         echo "deploying to ephemeral"
-        if [ -z "${EXTRA_DEPLOY_ARGS}" ]; then
-          EXTRA_DEPLOY_ARGS="$(parse-snapshot.py)"
-        else
-          EXTRA_DEPLOY_ARGS+=" $(parse-snapshot.py) "
-        fi
-        export EXTRA_DEPLOY_ARGS
-        deploy.sh "$(params.NS)" "$(params.NS_REQUESTER)"
+        deploy.py "$(params.NS)" "$(params.NS_REQUESTER)"
