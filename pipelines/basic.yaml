@@ -196,6 +196,9 @@ spec:
         - name: SNAPSHOT
           value: $(params.SNAPSHOT)
 
+        - name: BONFIRE_IMAGE
+          value: "$(params.BONFIRE_IMAGE)"
+
       taskRef:
         resolver: git
         params:
